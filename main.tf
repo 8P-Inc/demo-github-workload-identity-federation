@@ -8,14 +8,20 @@ terraform {
 }
 
 provider "azurerm" {
-  use_oidc           = true
   tenant_id          = "0128770c-3c63-4111-b09b-07596d021187"
   subscription_id    = "2df16f98-af9d-424a-b3b5-999bc70c0a92"
+  use_oidc           = var.use_oidc
   client_id          = var.client_id
   oidc_request_token = var.oidc_request_token
   oidc_request_url   = var.oidc_request_url
   skip_provider_registration = true
   features {}
+}
+
+variable "use_oidc" {
+  description = "Specify whether to use OIDC."
+  type        = bool
+  default     = true
 }
 
 variable "client_id" {
