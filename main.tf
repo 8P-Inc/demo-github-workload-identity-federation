@@ -14,6 +14,7 @@ provider "azurerm" {
   client_id          = var.client_id
   oidc_request_token = var.oidc_request_token
   oidc_request_url   = var.oidc_request_url
+  skip_provider_registration = true
   features {}
 }
 
