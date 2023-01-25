@@ -1,4 +1,4 @@
-name: DEV - Demo Azure Login with OIDC
+name: DEV - Demo Terraform with OIDC 
 on:
    workflow_dispatch:
 
