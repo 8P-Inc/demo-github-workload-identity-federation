@@ -11,8 +11,8 @@ jobs:
     env:
       TF_WORKSPACE: develop
       TF_VAR_client_id: ${{ secrets.AZURE_CLIENT_ID }}
-      TF_VAR_oidc_request_token: ${{ ACTIONS_ID_TOKEN_REQUEST_TOKEN }}
-      TF_VAR_oidc_request_url: ${{ ACTIONS_ID_TOKEN_REQUEST_URL }}
+      TF_VAR_oidc_request_token: ${{ env.ACTIONS_ID_TOKEN_REQUEST_TOKEN }}
+      TF_VAR_oidc_request_url: ${{ env.ACTIONS_ID_TOKEN_REQUEST_URL }}
     runs-on: ubuntu-latest
     environment: develop
     
